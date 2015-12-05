@@ -1,0 +1,32 @@
+# Component Repositories #
+##########################
+components
+node_modules
+
+# Output Directories #
+######################
+target
+out
+web-app/built
+
+# IDE Project files #
+#####################
+.idea/workspace.xml
+.settings
+.project
+.classpath
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+ehthumbs.db
+Thumbs.db
+
+# Junk #
+########
+*.log

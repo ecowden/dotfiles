@@ -1,0 +1,40 @@
+# Your snippets
+#
+# Atom snippets allow you to enter a simple prefix in the editor and hit tab to
+# expand the prefix into a larger code block with templated values.
+#
+# You can create a new snippet in this file by typing "snip" and then hitting
+# tab.
+#
+# An example CoffeeScript snippet to expand log to console.log:
+#
+# '.source.coffee':
+#   'Console log':
+#     'prefix': 'log'
+#     'body': 'console.log $1'
+#
+'.source.js':
+  'Use Strict':
+    'prefix': 'use'
+    'body': '\'use strict\';'
+  'Require from Module':
+    'prefix': 'reqm'
+    'body': 'const ${1:module} = require(\'${1:module}\')'
+  'Require with Alias':
+    'prefix': 'req'
+    'body': 'const ${1:alias} = require(\'${2:module}\')'
+  'Require Relative':
+    'prefix': 'reqr'
+    'body': 'const ${1:module} = require(\'./${1:module}\')'
+  'Require Test':
+    'prefix': 'reqt'
+    'body': 'const test = require(\'ava\')'
+  'Test (AVA)':
+    'prefix': 'test'
+    'body': 'test(\'${1:name}\', async function (t) {\n\n})'
+  'module.exports':
+    'prefix': 'me'
+    'body': 'module.exports = '
+  'module.exports function':
+    'prefix': 'mef'
+    'body': 'module.exports = function () {\n  $1\n}'

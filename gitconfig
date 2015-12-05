@@ -1,0 +1,35 @@
+[user]
+	name = Evan Cowden
+	email = evan.cowden@wwt.com
+[core]
+	autocrlf = input
+	safecrlf = false
+	editor = atom --wait
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /opt/homebrew-cask/Caskroom/sourcetree/2.0.5.5/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[alias]
+	shist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short --decorate --color=always
+	hist = log --oneline --graph --decorate --all --color=always
+	branch-clean = !git fetch && git remote prune origin && git branch --merged master | grep -v master | xargs git branch -d
+[color]
+	ui = auto
+	diff = true
+	status = true
+	branch = true
+
+[hub]
+protocol = https
+
+
+
+
+[credential]
+
+[push]
+	default = simple
+[credential]
+	helper = osxkeychain
