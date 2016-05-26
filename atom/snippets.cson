@@ -16,7 +16,7 @@
 '.source.js':
   'Use Strict':
     'prefix': 'use'
-    'body': '\'use strict\';'
+    'body': '\'use strict\''
   'Require from Module':
     'prefix': 'reqm'
     'body': 'const ${1:module} = require(\'${1:module}\')'
@@ -29,12 +29,46 @@
   'Require Test':
     'prefix': 'reqt'
     'body': 'const test = require(\'ava\')'
+  'JavaScript File (Node)':
+    'prefix': 'jsn'
+    'body': '\'use strict\'\n\nmodule.exports = function () {\n  \n}\n'
+  'Test File (AVA)':
+    'prefix': 'testjs'
+    'body': """
+'use strict'
+
+const test = require('ava')
+
+test('${1:name}', function* (t) {
+
+})
+    """
   'Test (AVA)':
     'prefix': 'test'
-    'body': 'test(\'${1:name}\', async function (t) {\n\n})'
+    'body': 'test(\'${1:name}\', function* (t) {\n\n})'
   'module.exports':
     'prefix': 'me'
     'body': 'module.exports = '
   'module.exports function':
     'prefix': 'mef'
     'body': 'module.exports = function () {\n  $1\n}'
+'JavaScript File (Node)':
+  'prefix': 'jsn'
+  'body': """
+'use strict'
+
+const test = require('ava')
+
+test('${1:name}', function* (t) {
+
+})
+  """
+'Test (AVA)':
+  'prefix': 'test'
+  'body': 'test(\'${1:name}\', function* (t) {\n\n})'
+'module.exports':
+  'prefix': 'me'
+  'body': 'module.exports = '
+'module.exports function':
+  'prefix': 'mef'
+  'body': 'module.exports = function () {\n  $1\n}'
